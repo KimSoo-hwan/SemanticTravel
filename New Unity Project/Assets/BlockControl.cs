@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class BlockControl : MonoBehaviour
 {
-    public GameObject Block;// 일반블럭
+    public GameObject[] Block;// 일반블럭
     public GameObject Arrive;// 도착블럭
-    GameObject Nomal;
+    public GameObject Nomal;
     static int i = 0;
+  
     public int end = 0;//블럭 갯수
     float randomX = 0;
     float randomY = 0;
@@ -18,7 +19,7 @@ public class BlockControl : MonoBehaviour
     void Start()
     {
         StartCoroutine("Create");
-
+        
        
     }
     // Update is called once per frame
@@ -32,21 +33,27 @@ public class BlockControl : MonoBehaviour
     IEnumerator Create()
     {
 
+        int percent = 0;
+        Vector3 vector;
+        vector = Nomal.transform.position;
+        vector.y = -30f;
+        Nomal.transform.position = vector;
+        while (true)
+        {
+            yield return null;
+            percent = Random.Range(0, 4);
 
-        randomx = Random.Range(5f, 10f);//Scale x 조절
-        randomy = Random.Range(1f, 2f);//Scale y 조절
-        randomX = Random.Range(-12f, 12f);//Position x 조절
-        randomY = Random.Range(3f, 4f);//Position y 조절
+            randomX = Random.Range(-12f, 12f);//Position x 조절
+            randomY = Random.Range(3f, 4f);//Position y 조절
 
-        yield return null;
-        Nomal = Instantiate(Block, new Vector3(randomX, Block.transform.position.y + randomY, 0f), Quaternion.identity);//일반블럭 생성과 Position
-            Nomal.transform.localScale = new Vector3(randomx, randomy, 0f);//일반블럭 Scale
-      
-        Debug.Log(Block.transform.localPosition);
-        i++;
+            Nomal = Instantiate(Block[percent], new Vector3(randomX, Nomal.transform.position.y + randomY, 0f), Quaternion.identity);//일반블럭 생성과 Position
+           
 
-        if (i > end - 2)
-            Instantiate(Arrive, new Vector3(0f, Nomal.transform.position.y + randomY, 0f), Quaternion.identity);//도착블럭 생성과 Position
+            i++;
+
+            if (i > end - 2)
+                Instantiate(Arrive, new Vector3(0f, Nomal.transform.position.y + randomY, 0f), Quaternion.identity);//도착블럭 생성과 Position
+        }
     }
 
 }
