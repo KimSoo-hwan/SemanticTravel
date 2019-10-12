@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 
@@ -15,10 +16,10 @@ public class PlayerMove : MonoBehaviour
     public bool isGorunded = false; //바닥체크
     public bool gameStart = false;
 
-
     Rigidbody2D rb;
     public int jumpCount = 2;   //2단점프
     public Text touchtoStart;
+    public Vector3 pos, pos2;
 
 
 
@@ -28,7 +29,7 @@ public class PlayerMove : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         jumpCount = 0;
         gameStart = false;
-
+        
     }
 
     void Update()
@@ -37,6 +38,9 @@ public class PlayerMove : MonoBehaviour
         GameStat();
         PlayerJump();
         Player_Move();
+        Falldown();
+                     
+        
 
     }
 
@@ -79,9 +83,13 @@ public class PlayerMove : MonoBehaviour
                     if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.UpArrow))
                     {
                         Debug.Log("jump");
-                        Rigidbody2D rigidbody2D = this.gameObject.GetComponent<Rigidbody2D>();
-                        rigidbody2D.AddForce(Vector3.up * jumpSpeed);
-                        //rb.AddForce(new Vector3(0, 1, 0) * jumpSpeed, ForceMode.Impulse);                  
+                        //addforce이용 jumpSpeed = 250
+                        //Rigidbody2D rigidbody2D = this.gameObject.GetComponent<Rigidbody2D>();
+                        //rigidbody2D.AddForce(Vector3.up * jumpSpeed);
+
+                        //velocity이용 jummpSpeed = 6
+                        GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jumpSpeed);
+                        
                         jumpCount--;
                         if (jumpCount == 0)
                             isGorunded = false;
@@ -119,6 +127,33 @@ public class PlayerMove : MonoBehaviour
                 transform.localScale = scale;
                 transform.Translate(Vector2.right * moveSpeedKeyboard * Time.deltaTime);
 
+            }
+        }
+    }
+
+    void Falldown()
+    {
+       
+
+        if (jumpCount == 2)
+        {
+            //현재높이
+            pos = this.gameObject.transform.position;
+            Debug.Log(pos.y);
+        }
+        
+        
+        
+        if (jumpCount < 2)
+        {
+            //가변높이
+            pos2 = this.gameObject.transform.position;
+            Debug.Log(pos2.y);
+            
+            //if (Mathf.Abs(pos2.y) - Mathf.Abs(pos.y) > Mathf.Abs(2))
+            if(Mathf.Abs(pos.y) - Mathf.Abs(pos2.y) > 3)
+            {
+                GameObject.Find("Main Camera").GetComponent<_Gm>().gameovertrigger = true;
             }
         }
     }

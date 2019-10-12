@@ -94,7 +94,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Block: []
   Arrive: {fileID: 8774290071445469460, guid: 63e98a0866560c348985fc0cfa484989, type: 3}
-  Nomal: {fileID: 0}
+  Nomal: {fileID: 7787453552811794462}
   end: 10
 --- !u!61 &7787453552811794463
 BoxCollider2D:
