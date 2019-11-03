@@ -43,7 +43,18 @@ public class _Gm : MonoBehaviour
     public void Restart()
     {
         gameOverText.SetActive(false);
-        SceneManager.LoadScene("Sematic Travel");
+        Re();
+    SceneManager.LoadScene("Sematic Travel");
+    }
+
+void Re()
+    {
+        BlockControl1.i = 0;
+        BlockControl1.up = 0f;
+        BlockControl2.Move2 = 0;
+        BlockControl2.i = 0;
+        BlockControl2.up = 0f;
+        BlockControl2.temp = 0;
     }
 
 }

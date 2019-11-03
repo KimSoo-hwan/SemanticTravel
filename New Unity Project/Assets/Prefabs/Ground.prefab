@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 8378215882675088333}
   - component: {fileID: 6451150670032428982}
   - component: {fileID: 5963938166401763728}
+  - component: {fileID: 7750152861191985329}
+  - component: {fileID: 5836689539995550748}
   - component: {fileID: 5137632943666704308}
   - component: {fileID: 5137632943666704311}
   m_Layer: 0
@@ -80,6 +82,48 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &7750152861191985329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3900657431810788344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5947c6391ad2254cbc349a6b3ac4a03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Block:
+  - {fileID: 1838690369255855928, guid: 8034959f47dfc274b88db4ef85ce46b5, type: 3}
+  - {fileID: 8185954061968622348, guid: 6059219665d01b14288f5c26d48f200a, type: 3}
+  - {fileID: 8185954061968622348, guid: 6059219665d01b14288f5c26d48f200a, type: 3}
+  - {fileID: 5658864151589901950, guid: 7376ef8374649ee4ca1cc0e1b4f68211, type: 3}
+  - {fileID: 3230742269566584687, guid: b55ed32573399b340bdf1c22906d06bc, type: 3}
+  - {fileID: 3230742269566584687, guid: b55ed32573399b340bdf1c22906d06bc, type: 3}
+  Arrive: {fileID: 8774290071445469460, guid: 63e98a0866560c348985fc0cfa484989, type: 3}
+  Nomal: {fileID: 1838690369255855928, guid: 8034959f47dfc274b88db4ef85ce46b5, type: 3}
+  end: 0
+--- !u!114 &5836689539995550748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3900657431810788344}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0739eb6813093d4db9402a6c714f280, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Block:
+  - {fileID: 7787453552811794462, guid: 8034959f47dfc274b88db4ef85ce46b5, type: 3}
+  - {fileID: 3404290250153240903, guid: 6059219665d01b14288f5c26d48f200a, type: 3}
+  - {fileID: 3404290250153240903, guid: 6059219665d01b14288f5c26d48f200a, type: 3}
+  - {fileID: 8173297431016545396, guid: 7376ef8374649ee4ca1cc0e1b4f68211, type: 3}
+  Arrive: {fileID: 8774290071445469460, guid: 63e98a0866560c348985fc0cfa484989, type: 3}
+  Nomal: {fileID: 7787453552811794462, guid: 8034959f47dfc274b88db4ef85ce46b5, type: 3}
+  end: 5
 --- !u!50 &5137632943666704308
 Rigidbody2D:
   serializedVersion: 4

@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Sematic Travel 1.unity
+    guid: 31b2788ad295c094d903069265b683e1
   m_configObjects: {}
