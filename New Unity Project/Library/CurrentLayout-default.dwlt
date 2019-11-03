@@ -95,7 +95,7 @@ MonoBehaviour:
   m_MinSize: {x: 917, y: 444}
   m_MaxSize: {x: 22012, y: 10022}
   vertical: 0
-  controlID: 31
+  controlID: 74
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 444}
   m_MaxSize: {x: 4002, y: 8044}
   vertical: 1
-  controlID: 32
+  controlID: 54
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -330,7 +330,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 6afbffff
+      m_ExpandedIDs: 7eeffbffb4effbff52f0fbff64f0fbffc6f0fbffeedefcfffa2afdff1c2cfdffc82cfdff1e2efdff0c31fdff9431fdff1e32fdff269ffdffdae1fdffb6e4fdff2642ffffae42ffff3843ffffe2ebffff60f3ffff4cf5ffff72f6ffffbef7ffff10f9ffff94f9ffffc8f9ffff6afbffff08380000403800005e3800008e3c00005c41000070410000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -437,7 +437,7 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/Scripts
   m_LastFoldersGridSize: 16
-  m_LastProjectPath: D:\SA\SemanticTravel\MoveBlock\New Unity Project
+  m_LastProjectPath: D:\SA\SemanticTravel\New Unity Project
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
@@ -499,7 +499,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: 
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -558,17 +558,17 @@ MonoBehaviour:
   m_MaximizeOnPlay: 0
   m_Gizmos: 0
   m_Stats: 0
-  m_SelectedSizes: 0700000000000000000000000d000000000000000000000000000000000000000000000000000000
+  m_SelectedSizes: 0800000000000000000000000d000000000000000000000000000000000000000000000000000000
   m_TargetDisplay: 0
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -540
-    m_HBaseRangeMax: 540
-    m_VBaseRangeMin: -960
-    m_VBaseRangeMax: 960
+    m_HBaseRangeMin: -119.5
+    m_HBaseRangeMax: 119.5
+    m_VBaseRangeMin: -212.5
+    m_VBaseRangeMax: 212.5
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -588,7 +588,7 @@ MonoBehaviour:
       y: 17
       width: 689
       height: 425
-    m_Scale: {x: 0.22135417, y: 0.22135417}
+    m_Scale: {x: 1, y: 1}
     m_Translation: {x: 344.5, y: 212.5}
     m_MarginLeft: 0
     m_MarginRight: 0
@@ -596,12 +596,12 @@ MonoBehaviour:
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -1556.3293
-      y: -960
-      width: 3112.6587
-      height: 1920
+      x: -344.5
+      y: -212.5
+      width: 689
+      height: 425
     m_MinimalGUI: 1
-  m_defaultScale: 0.22135417
+  m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
   m_LastWindowPixelSize: {x: 689, y: 442}
@@ -645,9 +645,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 7.566778, y: 2202.4473, z: -13.655522}
+    m_Target: {x: 2.1034093, y: 4.4358597, z: -1.921875}
     speed: 2
-    m_Value: {x: 7.566778, y: 2202.4473, z: -13.655522}
+    m_Value: {x: 2.1034093, y: 4.4358597, z: -1.921875}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -680,9 +680,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 39.462315
+    m_Target: 15.748982
     speed: 2
-    m_Value: 39.462315
+    m_Value: 15.748982
   m_Ortho:
     m_Target: 1
     speed: 2
