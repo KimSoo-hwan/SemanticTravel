@@ -58,6 +58,10 @@ void Re()
         BlockControl2.i = 0;
         BlockControl2.up = 0f;
         BlockControl2.temp = 0;
+        BlockControl3.Move2 = 0;
+        BlockControl3.i = 0;
+        BlockControl3.up = 0f;
+        BlockControl3.temp = 0;
     }
 
 }

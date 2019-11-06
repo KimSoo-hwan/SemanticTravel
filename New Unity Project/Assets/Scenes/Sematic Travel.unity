@@ -882,6 +882,7 @@ GameObject:
   m_Component:
   - component: {fileID: 888514976}
   - component: {fileID: 888514975}
+  - component: {fileID: 888514978}
   - component: {fileID: 888514974}
   - component: {fileID: 888514977}
   m_Layer: 0
@@ -972,7 +973,21 @@ MonoBehaviour:
   isPlayerAlive: 1
   gameOverText: {fileID: 1344527758}
   retryButton: {fileID: 506237211}
-  player: {fileID: 0}
+  player: {fileID: 42921115}
+--- !u!114 &888514978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888514973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2ea4db0992da3e4fa0747b3435f2ffe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 42921115}
+  moveSpeed: 1
 --- !u!1 &1344527758
 GameObject:
   m_ObjectHideFlags: 0
@@ -1588,7 +1603,7 @@ PrefabInstance:
     - target: {fileID: 5836689539995550748, guid: cffc8454213bba34fbcd18a030938fa6,
         type: 3}
       propertyPath: end
-      value: 4
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7750152861191985329, guid: cffc8454213bba34fbcd18a030938fa6,
         type: 3}
@@ -1602,6 +1617,11 @@ PrefabInstance:
       objectReference: {fileID: 59778940690022179, guid: b63eb4d9c2296984c96dcb04fcc2c52b,
         type: 3}
     - target: {fileID: 7750152861191985329, guid: cffc8454213bba34fbcd18a030938fa6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8390168564801957644, guid: cffc8454213bba34fbcd18a030938fa6,
         type: 3}
       propertyPath: m_Enabled
       value: 0

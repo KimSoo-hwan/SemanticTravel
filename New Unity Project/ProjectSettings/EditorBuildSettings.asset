@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Sematic Travel 1.unity
     guid: 31b2788ad295c094d903069265b683e1
+  - enabled: 1
+    path: Assets/Scenes/Sematic Travel 2.unity
+    guid: 469e31df9e4514945a95fca58c94f009
   m_configObjects: {}

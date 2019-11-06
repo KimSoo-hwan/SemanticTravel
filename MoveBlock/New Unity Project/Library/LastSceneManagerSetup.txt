@@ -1,0 +1,5 @@
+sceneSetups:
+- path: C:/Users/BlueSnack/Desktop/New Unity Project/Assets/Scenes/SampleScene.unity
+  isLoaded: 1
+  isActive: 1
+  isSubScene: 0
