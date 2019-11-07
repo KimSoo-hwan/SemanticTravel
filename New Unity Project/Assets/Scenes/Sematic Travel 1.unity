@@ -263,6 +263,12 @@ MonoBehaviour:
   touchtoStart: {fileID: 873521664}
   pos: {x: 0, y: 0, z: 0}
   pos2: {x: 0, y: 0, z: 0}
+  fallpos: {x: 0, y: 0, z: 0}
+  groundCheck: {fileID: 2037672078}
+  whatisGround:
+    serializedVersion: 2
+    m_Bits: 2048
+  checkRadius: 0.5
 --- !u!50 &76691003
 Rigidbody2D:
   serializedVersion: 4
@@ -361,7 +367,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 2037672078}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1416,6 +1423,36 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &2037672077
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2037672078}
+  m_Layer: 0
+  m_Name: PlayerFeet
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2037672078
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2037672077}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.01, y: -0.39999998, z: -330.88544}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 76691007}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2090514981
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1512,6 +1549,16 @@ PrefabInstance:
       propertyPath: touchtoStart
       value: 
       objectReference: {fileID: 873521664}
+    - target: {fileID: 3346120241624557101, guid: 9f385f44a1f14ad4691bb7736595f01e,
+        type: 3}
+      propertyPath: whatisGround.m_Bits
+      value: 2048
+      objectReference: {fileID: 0}
+    - target: {fileID: 3346120241624557101, guid: 9f385f44a1f14ad4691bb7736595f01e,
+        type: 3}
+      propertyPath: checkRadius
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3346120241624557102, guid: 9f385f44a1f14ad4691bb7736595f01e,
         type: 3}
       propertyPath: m_LocalPosition.x

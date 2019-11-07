@@ -17,9 +17,13 @@ public class PlayerMove : MonoBehaviour
     public bool gameStart = false;
 
     Rigidbody2D rb;
-    public int jumpCount = 2;   //2단점프
+    public int jumpCount = 1;   //2단점프
     public Text touchtoStart;
-    public Vector3 pos, pos2;
+    public Vector3 pos, pos2,fallpos;
+
+    public Transform groundCheck;
+    public LayerMask whatisGround;
+    public float checkRadius;
 
 
 
@@ -27,7 +31,7 @@ public class PlayerMove : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        jumpCount = 0;
+        jumpCount = 1;
         gameStart = false;
         
     }
@@ -43,16 +47,24 @@ public class PlayerMove : MonoBehaviour
         
 
     }
+    private void FixedUpdate()
+    {
+        isGorunded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatisGround);
+        if (isGorunded == true) {
+            isGorunded = true;
+            jumpCount = 1;
+      
+        }
+    }
 
     //바닥 충돌체크함수 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Ground")
         {
-            isGorunded = true;
-            jumpCount = 2;
+          
             GetComponent<AudioSource>().Play();
-            Debug.Log("Ground col");
+           
         }
     }
 
@@ -75,10 +87,13 @@ public class PlayerMove : MonoBehaviour
             rb.constraints = RigidbodyConstraints2D.None;
             rb.constraints = RigidbodyConstraints2D.FreezeRotation;
 
-            
-            if (jumpCount > 0)
+            if (isGorunded == true)
             {
-                if (isGorunded == true)
+                jumpCount = 1;
+            }
+
+                if (jumpCount > 0)            
+                
                 {
                     if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.UpArrow))
                     {
@@ -95,7 +110,7 @@ public class PlayerMove : MonoBehaviour
                             isGorunded = false;
                     }
                 }
-            }
+            
 
         }
     }
@@ -133,29 +148,36 @@ public class PlayerMove : MonoBehaviour
 
     void Falldown()
     {
-       
 
-        if (jumpCount == 2)
+        fallpos.y = 100 - (Mathf.Log10(pos.y));
+        //Debug.Log(fallpos.y);
+        if (jumpCount == 1)
         {
             //현재높이
+
             pos = this.gameObject.transform.position;
-            Debug.Log(pos.y);
-        }
-        
-        
-        
-        if (jumpCount < 2)
-        {
-            //가변높이
-            pos2 = this.gameObject.transform.position;
-            Debug.Log(pos2.y);
-            
-            //if (Mathf.Abs(pos2.y) - Mathf.Abs(pos.y) > Mathf.Abs(2))
-            if(Mathf.Abs(pos.y) - Mathf.Abs(pos2.y) > 3)
+            //   Debug.Log(pos.y);
+            if (Mathf.Abs(pos2.y) - Mathf.Abs(pos.y) > 3)
             {
                 GameObject.Find("Main Camera").GetComponent<_Gm>().gameovertrigger = true;
             }
         }
+
+
+
+        if (jumpCount < 1)
+        {
+            //가변높이
+            pos2 = this.gameObject.transform.position;
+            // Debug.Log(pos2.y);
+            if (Mathf.Abs(pos.y) - Mathf.Abs(pos2.y) > 3)
+            {
+                GameObject.Find("Main Camera").GetComponent<_Gm>().gameovertrigger = true;
+            }
+        }
+
+
+
     }
 
 

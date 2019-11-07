@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 9166924651185060223}
   - component: {fileID: 3410435876834264235}
   - component: {fileID: 4210833687556585579}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Cube
   m_TagString: New tag
   m_Icon: {fileID: 0}
@@ -152,7 +152,7 @@ GameObject:
   - component: {fileID: 5193090889238722153}
   - component: {fileID: 7396203706733660948}
   - component: {fileID: 7357099873828867727}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Arrive Block
   m_TagString: Ground
   m_Icon: {fileID: 0}
