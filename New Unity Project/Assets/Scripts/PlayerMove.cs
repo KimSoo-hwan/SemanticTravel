@@ -25,6 +25,7 @@ public class PlayerMove : MonoBehaviour
     public LayerMask whatisGround;
     public float checkRadius;
     public float fallposSlice = 0.25f;
+    public float max_Height = 10f;
 
 
 
@@ -154,14 +155,14 @@ public class PlayerMove : MonoBehaviour
         fallpos.y = (pos.y * logPos1.y ) * fallposSlice;
 
         //fallpos.y = pos.y * Mathf.Log10(pos.y);
-        Debug.Log(fallpos.y *0.25);
+        Debug.Log(max_Height - fallpos.y);
         if (jumpCount == 1)
         {
             //현재높이
 
             pos = this.gameObject.transform.position;
             //   Debug.Log(pos.y);
-            if (Mathf.Abs(pos2.y) - Mathf.Abs(pos.y) > fallpos.y && Mathf.Abs(pos2.y) - Mathf.Abs(pos.y) > 1)
+            if (Mathf.Abs(pos2.y) - Mathf.Abs(pos.y) > (max_Height - fallpos.y) && Mathf.Abs(pos2.y) - Mathf.Abs(pos.y) > 1)
             {
                 GameObject.Find("Main Camera").GetComponent<_Gm>().gameovertrigger = true;
             }
@@ -174,7 +175,7 @@ public class PlayerMove : MonoBehaviour
             //가변높이
             pos2 = this.gameObject.transform.position;
             // Debug.Log(pos2.y);
-            if (Mathf.Abs(pos.y) - Mathf.Abs(pos2.y) > fallpos.y && Mathf.Abs(pos.y) - Mathf.Abs(pos2.y) >1)
+            if (Mathf.Abs(pos.y) - Mathf.Abs(pos2.y) > (max_Height - fallpos.y) && Mathf.Abs(pos.y) - Mathf.Abs(pos2.y) >1)
             {
                 GameObject.Find("Main Camera").GetComponent<_Gm>().gameovertrigger = true;
             }
