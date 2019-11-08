@@ -56,7 +56,7 @@ public class BlockControl1 : MonoBehaviour
             randomY = Random.Range(2f, 2.5f);//Position y 조절
             randomx = Random.Range(1, 4);
 
-            Debug.Log(percent);
+           // Debug.Log(percent);
             
             Nomal = Instantiate(Block[percent], new Vector3(0f, up, 0f), Quaternion.identity);
             up += randomY;

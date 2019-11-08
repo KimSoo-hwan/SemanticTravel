@@ -24,6 +24,7 @@ public class PlayerMove : MonoBehaviour
     public Transform groundCheck;
     public LayerMask whatisGround;
     public float checkRadius;
+    public float fallposSlice = 0.25f;
 
 
 
@@ -148,16 +149,19 @@ public class PlayerMove : MonoBehaviour
 
     void Falldown()
     {
+        Vector3 logPos1;
+        logPos1.y = Mathf.Log10(pos.y);
+        fallpos.y = (pos.y * logPos1.y ) * fallposSlice;
 
-        fallpos.y = 100 - (Mathf.Log10(pos.y));
-        //Debug.Log(fallpos.y);
+        //fallpos.y = pos.y * Mathf.Log10(pos.y);
+        Debug.Log(fallpos.y *0.25);
         if (jumpCount == 1)
         {
             //현재높이
 
             pos = this.gameObject.transform.position;
             //   Debug.Log(pos.y);
-            if (Mathf.Abs(pos2.y) - Mathf.Abs(pos.y) > 3)
+            if (Mathf.Abs(pos2.y) - Mathf.Abs(pos.y) > fallpos.y && Mathf.Abs(pos2.y) - Mathf.Abs(pos.y) > 1)
             {
                 GameObject.Find("Main Camera").GetComponent<_Gm>().gameovertrigger = true;
             }
@@ -170,7 +174,7 @@ public class PlayerMove : MonoBehaviour
             //가변높이
             pos2 = this.gameObject.transform.position;
             // Debug.Log(pos2.y);
-            if (Mathf.Abs(pos.y) - Mathf.Abs(pos2.y) > 3)
+            if (Mathf.Abs(pos.y) - Mathf.Abs(pos2.y) > fallpos.y && Mathf.Abs(pos.y) - Mathf.Abs(pos2.y) >1)
             {
                 GameObject.Find("Main Camera").GetComponent<_Gm>().gameovertrigger = true;
             }
