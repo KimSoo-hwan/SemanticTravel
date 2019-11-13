@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class option2 : MonoBehaviour
 {
     public GameObject HowGmPanel;

@@ -155,7 +155,7 @@ public class PlayerMove : MonoBehaviour
         fallpos.y = (pos.y * logPos1.y ) * fallposSlice;
 
         //fallpos.y = pos.y * Mathf.Log10(pos.y);
-        Debug.Log(max_Height - fallpos.y);
+        //Debug.Log(max_Height - fallpos.y);
         if (jumpCount == 1)
         {
             //현재높이

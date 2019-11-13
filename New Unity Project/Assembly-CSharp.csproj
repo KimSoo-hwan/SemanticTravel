@@ -69,9 +69,14 @@
     <Compile Include="Assets\Scripts\BlockControl3.cs" />
     <Compile Include="Assets\Scripts\CameraMove.cs" />
     <Compile Include="Assets\Scripts\Disappear.cs" />
+    <Compile Include="Assets\Scripts\Exit.cs" />
     <Compile Include="Assets\Scripts\Move.cs" />
     <Compile Include="Assets\Scripts\Move2.cs" />
+    <Compile Include="Assets\Scripts\Option.cs" />
+    <Compile Include="Assets\Scripts\option2.cs" />
     <Compile Include="Assets\Scripts\PlayerMove.cs" />
+    <Compile Include="Assets\Scripts\SetColor.cs" />
+    <Compile Include="Assets\Scripts\StopButton.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/SA/SemanticTravel/New Unity Project/New Unity Project/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
