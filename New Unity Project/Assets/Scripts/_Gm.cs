@@ -11,18 +11,18 @@ public class _Gm : MonoBehaviour
     public GameObject gameOverText;
     public GameObject retryButton;
     public GameObject player;
-    
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
         gameOverText.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
         if (gameovertrigger == true)
         {
             GameOver();
@@ -47,10 +47,10 @@ public class _Gm : MonoBehaviour
     {
         gameOverText.SetActive(false);
         Re();
-    SceneManager.LoadScene("Sematic Travel");
+        SceneManager.LoadScene("Sematic Travel");
     }
 
-void Re()
+    void Re()
     {
         BlockControl1.i = 0;
         BlockControl1.up = 0f;
@@ -62,6 +62,14 @@ void Re()
         BlockControl3.i = 0;
         BlockControl3.up = 0f;
         BlockControl3.temp = 0;
+        BlockControl4.Move2 = 0;
+        BlockControl4.i = 0;
+        BlockControl4.up = 0f;
+        BlockControl4.temp = 0;
+        BlockControl5.Move2 = 0;
+        BlockControl5.i = 0;
+        BlockControl5.up = 0f;
+        BlockControl5.temp = 0;
     }
 
 }

@@ -51,9 +51,8 @@ public class BlockControl3 : MonoBehaviour
 
     IEnumerator Create()
     {
-        int percent;
-
-
+        int percent=0;
+        int count;
 
         while (true)
         {
@@ -61,8 +60,20 @@ public class BlockControl3 : MonoBehaviour
 
 
 
-            percent = Random.Range(0, 7);//블럭 생성 확률
+            count = Random.Range(0, 101);//블럭 생성 확률
 
+            if (count >= 0 && count <= 19)
+                percent = 0;
+            else if (count >= 20 && count <= 39)
+                percent = 1;
+            else if (count >= 40 && count <= 69)
+                percent = 2;
+            else if (count >= 70 && count <= 79)
+                percent = 3;
+            else if (count >= 80 && count <= 89)
+                percent = 4;
+            else if (count >= 90 && count <= 100)
+                percent = 5;
 
             Debug.Log(temp);
             randomY = Random.Range(2f, 2.5f);//Position y 조절
@@ -71,12 +82,12 @@ public class BlockControl3 : MonoBehaviour
 
             randomx = Random.Range(1, 4);// 1 = 가운데, 2 = 왼쪽, 3 = 오른쪽
 
-            if (temp == 5)
+            if (temp == 4)
                 Move2 = 2f;
             else
                 Move2 = 0f;
 
-            up += randomY + Move2;
+            up += (randomY + Move2);
 
             yield return null;
 
@@ -89,22 +100,20 @@ public class BlockControl3 : MonoBehaviour
 
 
 
-            if ((percent >= 0 && percent <= 3 && randomx == 1) || (percent == 5 && randomx == 1) || (percent == 6 && randomx == 1))
+            if (percent == 3 || randomx == 1 || percent == 5)
                 Nomal.transform.position = new Vector3(0f, up, 0f);
-            else if (percent >= 0 && percent <= 3 && randomx == 2)
+            else if (percent == 0 && randomx == 2)
                 Nomal.transform.position = new Vector3(-1.8f, up, 0f);
-            else if ((percent >= 1 && percent <= 2 && randomx == 2) || (percent == 5 && randomx == 2) || (percent == 6 && randomx == 2))
+            else if ((percent == 1 || percent == 4 || percent == 5) && randomx == 2)
                 Nomal.transform.position = new Vector3(-1.3f, up, 0f);
-            else if (percent >= 3 && randomx == 2)
+            else if (percent == 2 && randomx == 2)
                 Nomal.transform.position = new Vector3(-0.8f, up, 0f);
-            else if (percent >= 0 && percent <= 3 && randomx == 3)
+            else if (percent == 0 && randomx == 3)
                 Nomal.transform.position = new Vector3(1.8f, up, 0f);
-            else if ((percent >= 1 && percent <= 2 && randomx == 3) || (percent == 5 && randomx == 3) || (percent == 6 && randomx == 3))
+            else if ((percent == 1 || percent == 4 || percent == 5) && randomx == 3)
                 Nomal.transform.position = new Vector3(1.3f, up, 0f);
-            else if (percent >= 3 && randomx == 3)
+            else if (percent == 2 && randomx == 3)
                 Nomal.transform.position = new Vector3(0.8f, up, 0f);
-            else if (percent == 4)
-                Nomal.transform.position = new Vector3(0f, up, 0f);
 
 
 

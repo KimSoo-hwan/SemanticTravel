@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6023084150666574129}
   - component: {fileID: 1668020047702389393}
   - component: {fileID: 3794429526714363800}
-  - component: {fileID: 4140538726756341965}
+  - component: {fileID: 4298533496324145376}
   - component: {fileID: 2556685371380837588}
   m_Layer: 11
   m_Name: Move2
@@ -80,7 +80,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &4140538726756341965
+--- !u!114 &4298533496324145376
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

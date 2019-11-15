@@ -1126,6 +1126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f365033b9c5a2024d9e0299ae356e80a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ExitPanel: {fileID: 0}
 --- !u!1 &506237211
 GameObject:
   m_ObjectHideFlags: 0
@@ -4501,6 +4502,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7750152861191985329, guid: cffc8454213bba34fbcd18a030938fa6,
         type: 3}
+      propertyPath: Block.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7750152861191985329, guid: cffc8454213bba34fbcd18a030938fa6,
+        type: 3}
       propertyPath: end
       value: 5
       objectReference: {fileID: 0}
@@ -4508,14 +4514,36 @@ PrefabInstance:
         type: 3}
       propertyPath: Block.Array.data[4]
       value: 
-      objectReference: {fileID: 59778940690022179, guid: b63eb4d9c2296984c96dcb04fcc2c52b,
+      objectReference: {fileID: 3230742269566584687, guid: b55ed32573399b340bdf1c22906d06bc,
         type: 3}
     - target: {fileID: 7750152861191985329, guid: cffc8454213bba34fbcd18a030938fa6,
         type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7750152861191985329, guid: cffc8454213bba34fbcd18a030938fa6,
+        type: 3}
+      propertyPath: Block.Array.data[2]
+      value: 
+      objectReference: {fileID: 5658864151589901950, guid: 7376ef8374649ee4ca1cc0e1b4f68211,
+        type: 3}
+    - target: {fileID: 7750152861191985329, guid: cffc8454213bba34fbcd18a030938fa6,
+        type: 3}
+      propertyPath: Block.Array.data[3]
+      value: 
+      objectReference: {fileID: 59778940690022179, guid: b63eb4d9c2296984c96dcb04fcc2c52b,
+        type: 3}
     - target: {fileID: 8390168564801957644, guid: cffc8454213bba34fbcd18a030938fa6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 600796827926075984, guid: cffc8454213bba34fbcd18a030938fa6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 425966413442708642, guid: cffc8454213bba34fbcd18a030938fa6,
         type: 3}
       propertyPath: m_Enabled
       value: 0
