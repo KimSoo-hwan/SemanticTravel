@@ -21,4 +21,8 @@ public class OptionScene : MonoBehaviour
     {
         SceneManager.LoadScene("Sematic HowGmScene");
     }
+    public void ChangeExitScene()
+    {
+        SceneManager.LoadScene("Sematic ExitScene");
+    }
 }

@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Sematic HowGmScene.unity
     guid: 2e0c8bc5c5f46e249bf1cad1af74a40f
+  - enabled: 1
+    path: Assets/Scenes/Sematic ExitScene.unity
+    guid: 74bcd6051d0bd974fa2b55d6d03ca068
   m_configObjects: {}
