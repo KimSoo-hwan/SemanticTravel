@@ -4,17 +4,22 @@ using UnityEngine;
 
 public class StopStart : MonoBehaviour
 {
-    public bool pauseOn = false;
+    public GameObject StopPanel;
+    bool Isbool = false;
+
     public void ActivePauseBt()
     {
-        if (!pauseOn)
+        if (Isbool == false)
         {
             Time.timeScale = 0;
+            Isbool = true;
+            StopPanel.SetActive(true);
         }
-        else
+        else if (Isbool == true)
         {
+            StopPanel.SetActive(false);
+            Isbool = false;
             Time.timeScale = 1.0f;
         }
-        pauseOn = !pauseOn;
     }
 }
