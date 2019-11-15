@@ -24,7 +24,7 @@ public class CameraMove : MonoBehaviour
         }
         if (target.gameObject != null && cameraMoveTriiger == true)
         {
-            targetPostion.Set(target.transform.position.x, target.transform.position.y, this.transform.position.z);
+            targetPostion.Set(0, target.transform.position.y, this.transform.position.z);
 
             this.transform.position = Vector3.Lerp(this.transform.position, targetPostion, moveSpeed * Time.deltaTime);
 
