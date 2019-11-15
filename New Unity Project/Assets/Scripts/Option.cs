@@ -21,7 +21,6 @@ public class Option : MonoBehaviour
 
             Panel.SetActive(false);
             Isbool = false;
-            Debug.Log("Seebal");
             Time.timeScale = 1;
         }
 

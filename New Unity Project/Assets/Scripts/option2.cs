@@ -21,7 +21,6 @@ public class option2 : MonoBehaviour
 
             HowGmPanel.SetActive(false);
             Isbool = false;
-            Debug.Log("Yabal");
         }
 
     }
