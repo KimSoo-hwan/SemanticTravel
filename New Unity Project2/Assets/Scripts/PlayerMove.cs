@@ -12,7 +12,7 @@ public class PlayerMove : MonoBehaviour
     public float moveSpeedKeyboard = 5f;
     public float dirX;
     public float jumpSpeed = 250f;
-
+    
     public bool isGorunded = false; //바닥체크
     public bool gameStart = false;
 
@@ -26,7 +26,7 @@ public class PlayerMove : MonoBehaviour
     public float checkRadius;
     public float fallposSlice = 0.25f;
 
-
+    
 
 
     void Start()
@@ -56,6 +56,7 @@ public class PlayerMove : MonoBehaviour
             jumpCount = 1;
       
         }
+        
     }
 
     //바닥 충돌체크함수 
@@ -83,7 +84,7 @@ public class PlayerMove : MonoBehaviour
     //점프
     void PlayerJump()
     {
-        if (gameStart == true)
+        if (gameStart == true && GameObject.Find("Main Camera").GetComponent<_Gm>().isPlayerAlive == true)
         {
             rb.constraints = RigidbodyConstraints2D.None;
             rb.constraints = RigidbodyConstraints2D.FreezeRotation;
@@ -120,7 +121,7 @@ public class PlayerMove : MonoBehaviour
     {
         //기울기 플레이어 조작함수, - 더 좋은 코드를 찾는중입니다.
         //유니티리모트 안쓰고 컴퓨터에서 디버깅할때는 주석처리바람    
-        if (gameStart == true)
+        if (gameStart == true && GameObject.Find("Main Camera").GetComponent<_Gm>().isPlayerAlive == true)
         {
             dirX = Input.acceleration.x * moveSpeed;
             transform.Translate(dirX, 0, 0);
@@ -154,7 +155,7 @@ public class PlayerMove : MonoBehaviour
         fallpos.y = (pos.y * logPos1.y ) * fallposSlice;
 
         //fallpos.y = pos.y * Mathf.Log10(pos.y);
-        Debug.Log(fallpos.y *0.25);
+        //Debug.Log(fallpos.y *0.25);
         if (jumpCount == 1)
         {
             //현재높이
@@ -185,6 +186,7 @@ public class PlayerMove : MonoBehaviour
     }
 
 
+    
 
 
 

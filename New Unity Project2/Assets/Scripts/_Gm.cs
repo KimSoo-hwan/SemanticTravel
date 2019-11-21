@@ -34,7 +34,7 @@ public class _Gm : MonoBehaviour
     public void KillPlayer()
     {
         isPlayerAlive = false;
-        player.SetActive(false);
+        //player.SetActive(false);
 
     }
     void GameOver()

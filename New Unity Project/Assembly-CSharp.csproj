@@ -67,6 +67,8 @@
     <Compile Include="Assets\Scripts\BlockControl1.cs" />
     <Compile Include="Assets\Scripts\BlockControl2.cs" />
     <Compile Include="Assets\Scripts\BlockControl3.cs" />
+    <Compile Include="Assets\Scripts\BlockControl4.cs" />
+    <Compile Include="Assets\Scripts\BlockControl5.cs" />
     <Compile Include="Assets\Scripts\CameraMove.cs" />
     <Compile Include="Assets\Scripts\Disappear.cs" />
     <Compile Include="Assets\Scripts\Exit.cs" />
@@ -74,6 +76,7 @@
     <Compile Include="Assets\Scripts\Move2.cs" />
     <Compile Include="Assets\Scripts\Option.cs" />
     <Compile Include="Assets\Scripts\option2.cs" />
+    <Compile Include="Assets\Scripts\OptionScene.cs" />
     <Compile Include="Assets\Scripts\PlayerMove.cs" />
     <Compile Include="Assets\Scripts\SetColor.cs" />
     <Compile Include="Assets\Scripts\StopButton.cs" />
