@@ -6,11 +6,9 @@ using UnityEngine.EventSystems;
 
 public class StopStart : MonoBehaviour
 {
-    public float timeStart = 0.07f;
+    public float timeStart = 3;
     public Text textBox;
-    public GameObject players;
-    public float moveSpeed = 0;
-    public float jumpSpeed = 250f;
+    
 
     int del;
 
