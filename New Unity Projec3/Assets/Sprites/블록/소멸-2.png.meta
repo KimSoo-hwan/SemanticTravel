@@ -1,7 +1,19 @@
 fileFormatVersion: 2
 guid: 3b4484d6a974bb64aaff7dd7824bb9b9
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 2445564386784420049
+    second: "\uC18C\uBA78-2_0"
+  - first:
+      213: -4437662522344354643
+    second: "\uC18C\uBA78-2_1"
+  - first:
+      213: -8118984598312635977
+    second: "\uC18C\uBA78-2_2"
+  - first:
+      213: -5953997983320051789
+    second: "\uC18C\uBA78-2_3"
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -96,7 +108,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: "\uC18C\uBA78-2_0"
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 1545
+        width: 12
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70a04b675c1a24b43b8ff4b3d901f1b6
+      internalID: 2445564386784420049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\uC18C\uBA78-2_1"
+      rect:
+        serializedVersion: 2
+        x: 1287
+        y: 1540
+        width: 50
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a75191be5420fc438af364d8da04388
+      internalID: -4437662522344354643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\uC18C\uBA78-2_2"
+      rect:
+        serializedVersion: 2
+        x: 1352
+        y: 1539
+        width: 31
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5153f83997a2ec24ab78d3837008ecbf
+      internalID: -8118984598312635977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\uC18C\uBA78-2_3"
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 1308
+        width: 692
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfc329737a6e7ce47833bf931c0676cf
+      internalID: -5953997983320051789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

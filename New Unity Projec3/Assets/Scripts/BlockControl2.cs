@@ -100,19 +100,19 @@ public class BlockControl2 : MonoBehaviour
 
 
             if (percent == 3 || randomx == 1)
-                Nomal.transform.position = new Vector3(0f, up , 0f);
+                Nomal.transform.position = new Vector3(0f, up , -1f);
             else if (percent == 0 && randomx == 2)
-                Nomal.transform.position = new Vector3(-1.8f, up , 0f);
+                Nomal.transform.position = new Vector3(-1.8f, up , -1f);
             else if ((percent == 1 || percent == 4) && randomx == 2)
-                Nomal.transform.position = new Vector3(-1.3f, up , 0f);
+                Nomal.transform.position = new Vector3(-1.3f, up , -1f);
             else if (percent == 2 && randomx == 2)
-                Nomal.transform.position = new Vector3(-0.8f, up , 0f);
+                Nomal.transform.position = new Vector3(-0.8f, up , -1f);
             else if (percent == 0 && randomx == 3)
-                Nomal.transform.position = new Vector3(1.8f, up , 0f);
+                Nomal.transform.position = new Vector3(1.8f, up , -1f);
             else if ((percent == 1 || percent == 4) && randomx == 3)
-                Nomal.transform.position = new Vector3(1.3f, up , 0f);
+                Nomal.transform.position = new Vector3(1.3f, up , -1f);
             else if (percent == 2 && randomx == 3)
-                Nomal.transform.position = new Vector3(0.8f, up  , 0f);
+                Nomal.transform.position = new Vector3(0.8f, up  , -1f);
 
 
             temp = percent;
