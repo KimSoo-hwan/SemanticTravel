@@ -8,6 +8,25 @@ public class OptionScene : MonoBehaviour
     public static int Snum;
     public void ChangeOptionScene()
     {
+        BlockControl1.i = 0;
+        BlockControl1.up = 0f;
+        BlockControl2.Move2 = 0;
+        BlockControl2.i = 0;
+        BlockControl2.up = 0f;
+        BlockControl2.temp = 0;
+        BlockControl3.Move2 = 0;
+        BlockControl3.i = 0;
+        BlockControl3.up = 0f;
+        BlockControl3.temp = 0;
+        BlockControl4.Move2 = 0;
+        BlockControl4.i = 0;
+        BlockControl4.up = 0f;
+        BlockControl4.temp = 0;
+        BlockControl5.Move2 = 0;
+        BlockControl5.i = 0;
+        BlockControl5.up = 0f;
+        BlockControl5.temp = 0;
+
         if (SceneManager.GetActiveScene().name == "Sematic Travel")
             Snum = 0;
         else if (SceneManager.GetActiveScene().name == "Sematic Travel 1")
@@ -44,5 +63,9 @@ public class OptionScene : MonoBehaviour
     public void ChangeExitScene()
     {
         SceneManager.LoadScene("Sematic ExitScene");
+    }
+    public void ChangeImforScene()
+    {
+        SceneManager.LoadScene("Sematic ImforScene");
     }
 }
