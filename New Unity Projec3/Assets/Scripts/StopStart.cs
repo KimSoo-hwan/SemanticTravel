@@ -28,13 +28,14 @@ public class StopStart : MonoBehaviour
     {
         if (del == 1)
         {           
-            timeStart -= Time.deltaTime;
+            timeStart -= Time.deltaTime;    //시간 내려가는거
             textBox.text = Mathf.Round(timeStart).ToString();
-           // Time.timeScale = 0;
+            Time.timeScale = 1.0f;
             if (timeStart<=0)
-            {
+            {                              
                 timeStart = 3;
                 textBox.text = "";
+                Time.timeScale = 1.0f;
                 del = 0;                
             }          
         }
@@ -54,7 +55,7 @@ public class StopStart : MonoBehaviour
         {            
             StopPanel.SetActive(false);//명암 그냥 때려박은거임 쉿
            // StartCoroutine("End");
-            del = 1;            
+            del = 1;  //카운트다운 시작          
             Time.timeScale = 1.0f;
             Isbool = false;
             timeStart = 3;

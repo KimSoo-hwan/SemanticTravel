@@ -66,6 +66,6 @@ public class OptionScene : MonoBehaviour
     }
     public void ChangeImforScene()
     {
-        SceneManager.LoadScene("Sematic ImforScene");
+        SceneManager.LoadScene("Sematic InformationScene");
     }
 }
