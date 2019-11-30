@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems; //ui터치시 점프 안되게
 
 
 
@@ -101,17 +102,20 @@ public class PlayerMove : MonoBehaviour
             {
                 if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.UpArrow))
                 {
-                    Debug.Log("jump");
-                    //addforce이용 jumpSpeed = 250
-                    //Rigidbody2D rigidbody2D = this.gameObject.GetComponent<Rigidbody2D>();
-                    //rigidbody2D.AddForce(Vector3.up * jumpSpeed);
+                    if (EventSystem.current.IsPointerOverGameObject() == false)
+                    {
+                        Debug.Log("jump");
+                        //addforce이용 jumpSpeed = 250
+                        //Rigidbody2D rigidbody2D = this.gameObject.GetComponent<Rigidbody2D>();
+                        //rigidbody2D.AddForce(Vector3.up * jumpSpeed);
 
-                    //velocity이용 jummpSpeed = 6
-                    GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jumpSpeed);
+                        //velocity이용 jummpSpeed = 6
+                        GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jumpSpeed);
 
-                    jumpCount--;
-                    if (jumpCount == 0)
-                        isGorunded = false;
+                        jumpCount--;
+                        if (jumpCount == 0)
+                            isGorunded = false;
+                    }
                 }
             }
 
